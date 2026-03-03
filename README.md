@@ -1,4 +1,4 @@
-# Kaito - Advanced Discord Bot
+# Kaito - Advanced Discord Bot 
 
 A powerful, feature‑rich Discord bot with economy and moderation systems, written in JavaScript using discord.js v14.  
 Includes persistent storage, cooldowns, and a wide range of commands for fun, economy, and server management.
@@ -79,3 +79,5 @@ Both slash commands and prefix commands:
 
 git clone https://github.com/yourusername/kaito-bot.git
 cd kaito-bot
+```
+https://enkryptedv1rus.github.io/vanta.github.io/
