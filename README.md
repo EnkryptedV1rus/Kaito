@@ -1,89 +1,81 @@
-# Advanced Discord Moderation Bot
+# Kaito - Advanced Discord Bot
 
-A powerful, feature‑rich moderation bot for Discord, written in JavaScript using discord.js v14.  
-Includes per‑server configuration, persistent storage, and a wide range of moderation commands.
+A powerful, feature‑rich Discord bot with economy and moderation systems, written in JavaScript using discord.js v14.  
+Includes persistent storage, cooldowns, and a wide range of commands for fun, economy, and server management.
 
 ## Features
 
-- **Moderation**: Ban, kick, mute (timeout), warn, purge, slowmode, lockdown, nick, voice kick/move, and more.
-- **Configuration**: Per‑server prefix and log channel (stored in JSON).
-- **Warning System**: Track warnings per user, list them, delete specific warnings.
-- **Lockdown**: Lock channels with automatic unlocking, restoring original permissions.
-- **Fun Commands**: `howgay`, `say`, `ping`.
-- **Safe Mode**: Users can toggle their messages to be reposted as embeds.
-- **Slash Commands** (global) and **Prefix Commands** (customizable prefix).
-- **Logging**: All moderation actions are logged to a designated channel.
+### 💰 Economy System
+Complete economy with balance, daily rewards, work, shop, inventory, bank, gambling, and more:
+- `balance` - Check your or another user's balance
+- `daily` - Claim daily rewards with streak bonuses
+- `work` - Work to earn coins (1 hour cooldown)
+- `shop` - Browse available items
+- `buy` - Purchase items from the shop
+- `inventory` - View your items
+- `give` - Transfer coins to another user
+- `leaderboard` - View the richest users
+- `bank` - Deposit, withdraw, and check bank balance
+- `steal` - Attempt to rob another user (30 min cooldown)
+- `gamble` - 50/50 double or nothing (5 min cooldown)
+- `fish` - Go fishing (requires fishing rod, 1 min cooldown)
+- `crime` - Commit a crime for high risk/reward (1 hour cooldown)
+- `slots` - Play the slot machine (30 sec cooldown)
+- `interest` - Earn interest on bank savings (0.1% per hour)
+- `use` - Use items from your inventory
+
+### 🛡️ Moderation
+Complete moderation toolkit:
+- `ban` - Ban a user from the server
+- `kick` - Kick a user from the server
+- `purge` - Delete multiple messages at once
+- `warn` - Warn a user
+- `warnings` - List warnings for a user
+- `clearwarnings` - Clear all warnings for a user
+- `mute` - Timeout a user (temporary mute)
+- `unmute` - Remove timeout from a user
+- `slowmode` - Set slowmode in the current channel
+- `lock` - Lock the current channel
+- `unlock` - Unlock the current channel
+- `addrole` - Add a role to a user
+- `removerole` - Remove a role from a user
+- `modlog` - Set the channel for moderation logs
+- `prefix` - Change the command prefix
+
+### 🎉 Fun Commands
+Entertainment features:
+- `8ball` - Ask the magic 8ball a question
+- `coinflip` - Flip a coin
+- `dice` - Roll a dice (customizable sides)
+- `rps` - Play rock-paper-scissors
+- `meme` - Fetch a random meme from Reddit
+- `joke` - Get a random joke
+
+### ℹ️ Utility
+- `help` - Show all available commands
+
+### 📊 Persistent Storage
+All data saved in JSON files:
+- `guildSettings.json` - Server settings (prefix, modlog channel)
+- `economy.json` - Economy data (balances, inventory, streaks)
+- `warnings.json` - Warning system (per user per guild)
+
+### ⚡ Dual Command System
+Both slash commands and prefix commands:
+- **Slash commands** - Registered globally, accessible via `/`
+- **Prefix commands** - Customizable per-server prefix (default: `?`)
 
 ## What you need
 
 - [Node.js](https://nodejs.org/) v16.9.0 or higher
 - A Discord bot token ([Discord Developer Portal](https://discord.com/developers/applications))
 - Git (optional)
-- [Visual Studio Code](https://code.visualstudio.com/), Google Antigravity, or [PyCharm](https://www.jetbrains.com/pycharm/download/?section=windows)
+- [Visual Studio Code](https://code.visualstudio.com/) or any code editor
 
 ## Installation
 
-**Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/your-repo.git
-   cd your-repo
-```
-Install dependencies
+### 1. Clone the repository
 ```bash
-npm install discord.js dotenv
-```
 
-Create a `.env` file in the root directory and add your bot token:
-
-```env
-TOKEN=your_bot_token_here
-```
-Invite the bot to your server
-Use the following OAuth2 URL generator (replace CLIENT_ID with your bot's client ID):
-
-https://discord.com/api/oauth2/authorize?client_id=CLIENT_ID&permissions=8&scope=bot%20applications.commands
-
-Permissions: Administrator (for simplicity) – you can customise the permissions later.
-
-Run the bot
-
-```bash
-node index.js
-```
-For production, consider using [PM2](https://pm2.keymetrics.io/):
-
-```bash
-npm install -g pm2
-pm2 start index.js --name "mod-bot"
-```
-Usage
-Slash commands – Type `/` and browse the list.
-
-Prefix commands – Default prefix is `!`. Use `!help` to see available message commands.
-
-Change the prefix with `/prefix new_prefix` (Admin only).
-
-Set a log channel with `/log channel #`channel (Admin only).
-
-## Commands Overview
-| Category      | Commands                                                                                                                            |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Moderation    | /ban, /unban, /kick, /mute, /unmute, /warn, /warnings, /delwarn, /purge, /slowmode, /lockdown, /unlockdown, /nick, /vckick, /vcmove |
-| Configuration | /prefix, /log channel, /config                                                                                                      |
-| Fun           | /ping, /howgay, /say                                                                                                                |
-| Utility       | /safemode, /checksafemode, /help                                                                                                    |
-
-## Data Storage
-All server settings (prefix, log channel, warnings, lockdown states) are stored in guildData.json.
-You can safely edit this file while the bot is offline, but be careful with the JSON structure.
-
-## 🧩 Overview/Summary
-
-1. **Save the script** as `index.js` in your project folder.
-2. **Create a `.env` file** with your token.
-3. **Run `npm init -y`** (if you haven't already) and then `npm install discord.js dotenv`.
-4. **Test the bot** in a server.
-
-License
----
-[MIT]
+git clone https://github.com/yourusername/kaito-bot.git
+cd kaito-bot
