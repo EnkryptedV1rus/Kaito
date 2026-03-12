@@ -96,3 +96,8 @@ Both slash commands and prefix commands:
 ```bash
 git clone https://github.com/EnkryptedV1rus/kaito-bot.git
 cd kaito-bot
+```
+2. **Install dependencies**
+```bash
+npm install
+```
