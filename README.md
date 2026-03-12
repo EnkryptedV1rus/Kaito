@@ -101,3 +101,19 @@ cd kaito-bot
 ```bash
 npm install
 ```
+
+---
+
+## Configuration
+
+1. Create a config.json file in the root directory with the following structure:
+```bash
+{
+  "token": "YOUR_BOT_TOKEN",
+  "clientId": "YOUR_CLIENT_ID",
+  "defaultPrefix": "?"
+}
+```
+`token`: Your bot token
+`clientId`: Your bot
+
