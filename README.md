@@ -94,5 +94,5 @@ Both slash commands and prefix commands:
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/EnmryptedV1rus/kaito-bot.git
+git clone https://github.com/EnkryptedV1rus/kaito-bot.git
 cd kaito-bot
