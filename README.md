@@ -1,119 +1,110 @@
-# Kaito - Advanced Discord Bot
+# Kaito
 
-A powerful, feature‑rich Discord bot with economy and moderation systems, written in JavaScript using discord.js v14.  
-Includes persistent storage, cooldowns, and a wide range of commands for fun, economy, and server management.
+<p align="center">
+  <b>A powerful multipurpose Discord bot designed to entertain, protect, and manage communities.</b>
+</p>
 
----
+<p align="center">
 
-## Features
+![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
+![Discord.py](https://img.shields.io/badge/Discord.py-Library-5865F2?style=for-the-badge&logo=discord)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Maintained](https://img.shields.io/badge/Maintained-Yes-brightgreen?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active-orange?style=for-the-badge)
 
-### 💰 Economy System
-
-Complete economy with balance, daily rewards, work, shop, inventory, bank, gambling, and more:
-
-- `balance` - Check your or another user's balance  
-- `daily` - Claim daily rewards with streak bonuses  
-- `work` - Work to earn coins (1 hour cooldown)  
-- `shop` - Browse available items  
-- `buy` - Purchase items from the shop  
-- `inventory` - View your items  
-- `give` - Transfer coins to another user  
-- `leaderboard` - View the richest users  
-- `bank` - Deposit, withdraw, and check bank balance  
-- `steal` - Attempt to rob another user (30 min cooldown)  
-- `gamble` - 50/50 double or nothing (5 min cooldown)  
-- `fish` - Go fishing (requires fishing rod, 1 min cooldown)  
-- `crime` - Commit a crime for high risk/reward (1 hour cooldown)  
-- `slots` - Play the slot machine (30 sec cooldown)  
-- `interest` - Earn interest on bank savings (0.1% per hour)  
-- `use` - Use items from your inventory  
-
-### 🛡️ Moderation
-
-Complete moderation toolkit:
-
-- `ban` - Ban a user from the server  
-- `kick` - Kick a user from the server  
-- `purge` - Delete multiple messages at once  
-- `warn` - Warn a user  
-- `warnings` - List warnings for a user  
-- `clearwarnings` - Clear all warnings for a user  
-- `mute` - Timeout a user (temporary mute)  
-- `unmute` - Remove timeout from a user  
-- `slowmode` - Set slowmode in the current channel  
-- `lock` - Lock the current channel  
-- `unlock` - Unlock the current channel  
-- `addrole` - Add a role to a user  
-- `removerole` - Remove a role from a user  
-- `modlog` - Set the channel for moderation logs  
-- `prefix` - Change the command prefix  
-
-### 🎉 Fun Commands
-
-Entertainment features:
-
-- `8ball` - Ask the magic 8ball a question  
-- `coinflip` - Flip a coin  
-- `dice` - Roll a dice (customizable sides)  
-- `rps` - Play rock-paper-scissors  
-- `meme` - Fetch a random meme from Reddit  
-- `joke` - Get a random joke  
-
-### ℹ️ Utility
-
-- `help` - Show all available commands  
-
-### 📊 Persistent Storage
-
-All data saved in JSON files:
-
-- `guildSettings.json` - Server settings (prefix, modlog channel)  
-- `economy.json` - Economy data (balances, inventory, streaks)  
-- `warnings.json` - Warning system (per user per guild)  
-
-### ⚡ Dual Command System
-
-Both slash commands and prefix commands:
-
-- Slash commands - Registered globally, accessible via `/`  
-- Prefix commands - Customizable per-server prefix (default: `?`)  
+</p>
 
 ---
 
-## What You Need
+## Overview
 
-- Node.js v16.9.0 or higher  
-- A Discord bot token (Discord Developer Portal)  
-- Git (optional)  
-- Visual Studio Code or any code editor  
+**Kaito** is a feature-rich Discord bot built with **Discord.py** that combines moderation tools, an economy system, and fun commands into one bot.  
+It is designed to be **lightweight, customizable, and easy to host**, making it suitable for both small and large communities.
 
 ---
 
-## Installation
+# Features
 
-1. **Clone the repository**
+## 💰 Economy System
 
-```bash
-git clone https://github.com/EnkryptedV1rus/kaito-bot.git
-cd kaito-bot
-```
-2. **Install dependencies**
-```bash
-npm install
-```
+| Command | Description |
+|-------|-------------|
+| `balance` | Check your or another user's balance |
+| `daily` | Claim daily rewards with streak bonuses |
+| `work` | Work to earn coins |
+| `shop` | Browse shop items |
+| `buy` | Purchase items |
+| `inventory` | View your items |
+| `give` | Send coins to another user |
+| `leaderboard` | View richest users |
+| `bank` | Deposit and withdraw coins |
+| `steal` | Attempt to rob another user |
+| `gamble` | 50/50 double or nothing |
+| `fish` | Catch fish with a fishing rod |
+| `crime` | High-risk coin reward |
+| `slots` | Slot machine gambling |
+| `interest` | Passive bank interest |
+| `use` | Use items from inventory |
 
 ---
 
-## Configuration
+## 🛡 Moderation System
 
-1. Create a config.json file in the root directory with the following structure:
-```bash
-{
-  "token": "YOUR_BOT_TOKEN",
-  "clientId": "YOUR_CLIENT_ID",
-  "defaultPrefix": "?"
-}
-```
-`token`: Your bot token
-`clientId`: Your bot
+| Command | Description |
+|-------|-------------|
+| `ban` | Ban a member |
+| `kick` | Kick a member |
+| `purge` | Bulk delete messages |
+| `warn` | Warn a member |
+| `warnings` | View warnings |
+| `clearwarnings` | Clear warnings |
+| `mute` | Timeout a user |
+| `unmute` | Remove timeout |
+| `slowmode` | Set channel slowmode |
+| `lock` | Lock a channel |
+| `unlock` | Unlock a channel |
+| `addrole` | Add a role |
+| `removerole` | Remove a role |
+| `modlog` | Configure moderation logs |
+| `prefix` | Change command prefix |
 
+---
+
+## 🎉 Fun Commands
+
+| Command | Description |
+|-------|-------------|
+| `8ball` | Ask the magic 8ball a question |
+| `coinflip` | Flip a coin |
+| `dice` | Roll a customizable dice |
+| `rps` | Rock-paper-scissors |
+| `meme` | Fetch a random meme |
+| `joke` | Get a random joke |
+
+---
+
+## ⚙ Utility
+
+| Command | Description |
+|-------|-------------|
+| `help` | Display all commands |
+
+---
+
+# Persistent Storage
+
+Kaito stores data using JSON files.
+
+| File | Purpose |
+|-----|---------|
+| `guildSettings.json` | Server settings such as prefix and modlog channel |
+| `economy.json` | Economy balances, inventory, and streaks |
+| `warnings.json` | Warning system data |
+
+---
+
+# Command System
+
+Kaito supports both **slash commands** and **prefix commands**.
+
+Default prefix: `,` (changeable)
