@@ -107,4 +107,4 @@ Kaito stores data using JSON files.
 
 Kaito supports both **slash commands** and **prefix commands**.
 
-Default prefix: `,` (changeable)
+Default prefix: `!` (changeable)
